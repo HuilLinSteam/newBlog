@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Tether core CSS -->
+		<link href="../css/tether.min.css" rel="stylesheet">
+		<!-- Bootstrap CSS -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<!-- Font-Awesome CSS -->
+		<link href="../css/font-awesome.min.css" rel="stylesheet">
+		<!-- NProgress CSS -->
+		<link href="../css/nprogress.css" rel="stylesheet">
+		<!-- thinker-md CSS -->
+		<link href="../css/thinker-md.vendor.css" rel="stylesheet">
+		<!-- bootstrap tags CSS -->
+		<link href="../css/component-tageditor.css" rel="stylesheet">
+		<!-- bootstrap chosen CSS -->
+		<link href="../css/component-chosen.min.css" rel="stylesheet">
+		<!-- toastr CSS -->
+		<link href="../css/toastr.min.css" rel="stylesheet">
+		<!-- jQuery image cropping plugin CSS -->
+		<link href="../css/cropbox.css" rel="stylesheet">
+		<!-- Custom styles -->
+		<link href="../css/style.css" rel="stylesheet">
+		<link href="../css/thymeleaf-bootstrap-paginator.css" rel="stylesheet">
+		<link href="../css/blog.css" rel="stylesheet">
+		<title>Blog</title>
+
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md">
+			<div class="container">
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsContainer"
+				 aria-controls="navbarsExampleContainer" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<a class="navbar-brand" href="../index.html">NewStarBlog</a>
+
+				<div class="collapse navbar-collapse" id="navbarsContainer">
+
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" style="color: #5bc0de" href="../index.html?orderModel=0">最新 <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" style="color: red;" href="../index.html?orderModel=1">最热</a>
+						</li>
+						<form class="form-inline mt-2 mt-md-0">
+							<input class="form-control mr-sm-2 inputKeyword" type="text" placeholder="搜索">
+							<button type="button" class="btn btn-outline-secondary my-2 my-sm-0 searchBtn"><i class="fa fa-search" aria-hidden="true"></i></button>
+						</form>
+
+					</ul>
+					<div class="loginArea row hidden">
+						<!-- <div class="btn"> -->
+
+						<div class="dropdown" style="margin: auto 10px;">
+
+							<a class="dropdown-toggle" id="message" href="#" data-toggle="dropdown">
+								<span class="userName">12312</span>
+
+							</a>
+							<div class="dropdown-menu LoginPersonBox">
+								<a class="dropdown-item" href="userProfile.html">个人主页</a>
+								<a class="dropdown-item" href="settingUserInfo.html">个人设置</a>
+							</div>
+
+						</div>
+						<!-- </div> -->
+
+
+						<div>
+							<a href="blogedit.html" class="btn my-2 my-sm-0 editBlog">写博客</a>
+						</div>
+
+						<div>
+							<input class="btn logout" type="submit" style="background: #f7f7f9;color: #5BC0DE;margin-left: 10px;" value="退出">
+						</div>
+					</div>
+
+
+
+					<div>
+						<button class="btn my-2 my-sm-0 login" style="background: #f7f7f9;color: #5BC0DE;margin-left: 10px;" type="submit">登录</button>
+						<button class="btn my-2 my-sm-0 register" style="background: #f7f7f9;color: #5BC0DE;margin-left: 10px;" type="submit">注册</button>
+					</div>
+
+				</div>
+
+			</div>
+		</nav>
+		<!-- Page Content -->
+		<div class="container blog-content-container">
+
+			<div class="row">
+
+				<!-- Blog Entries Column -->
+				<div class="col-md-8">
+
+					<!-- Blog Post -->
+					<div class="card mb-4">
+						<div class="card-block">
+							<h2 class="card-title">
+								<span>
+									<img src="../images/avatar-defualt.jpg" class="blog-avatar-50 blogDetailUserImgUrl">
+								</span>
+								<a href="#" class="card-link blogTitle" title="blog">
+									OAuth 2.0 认证的原理与实践
+								</a>
+								<span class="blogEditBox">
+									<!-- <a href="#" class="btn btn-outline-secondary float-right">编辑</a>
+									<a href="javascript:void(0)" class="btn btn-primary float-right blog-delete-blog">删除</a> -->
+								</span>
+							</h2>
+
+							<hr />
+							<div class="card-text">
+								<a href="#" class="card-link blogUser">waylau</a>
+								发表于
+								<span class="blogTime">2020</span>
+								<div style="float: right;">
+									<button class="btn badge badge-danger badge-pill" style="margin-left: 25px;font-size:12px">浏览量<span class="seeCount"></span></button>
+									<button class="btn badge badge-info badge-pill" style="margin-left: 5px;font-size:12px">点赞量<span class="likeCount"></span></button>
+									<button class="btn badge badge-default badge-pill" style="margin-left: 5px;font-size:12px">评论量<span class="commentCount"></span></button>
+								</div>
+
+							</div>
+							<div>
+								<b>摘要</b>:<span class="summary"></span>
+							</div>
+							<hr>
+							<article class="post-content">
+
+
+							</article>
+
+							<hr>
+						</div>
+						<div class="card-block hidden">
+
+
+							<h5>分类：<a href="#">
+									Spring Data
+								</a></h5>
+
+							<h5>标签：
+								<a href="#"> <span class="badge badge-default">Web Design</span></a>
+								<a href="#"> <span class="badge badge-default">Jersey</span></a>
+								<a href="#"> <span class="badge badge-default">JavaScript</span></a>
+								<a href="#"> <span class="badge badge-default">CSS</span></a>
+								<a href="#"> <span class="badge badge-default">Java</span></a>
+								<a href="#"> <span class="badge badge-default">Freebies</span></a>
+
+							</h5>
+						</div>
+
+						<div class="card-block">
+							<h5>点赞与评论：</h5>
+							<div class="row">
+								<div class="col-lg-12">
+									<textarea class="blog-textarea commentContent" placeholder="看帖不需留言~"></textarea>
+								</div>
+							</div>
+							<button class="btn btn-warning float-left hidden" blogId="-1" blogUserId="-1" id="likeBlog">点赞博客</button>
+							<button class="btn btn-info float-right hidden" blogId="-1" id="commentBlog">发表评论</button>
+
+						</div>
+						<hr />
+						<div class="card-block commentArea">
+							<!-- <h5>评论区</h5>
+							<div class="row p-3 " style="border-bottom: 1px solid #e1dddd;>
+								<h2 class="card-title col-lg-1 col-md-2">
+									<span>
+										<a href="#" title="waylau">
+											<img src="../images/avatar-defualt.jpg" style="border: 1px solid;" class="blog-avatar-50" alt="waylau">
+										</a>
+									</span>
+								</h2> -->
+								
+								<!-- <div class="card-text col-lg-11 col-md-10">
+									<!-- 评论具体内容 -->
+									<!-- <div style="font-size: 13px;">
+										<a href="#" class="card-link">waylau</a> 1楼 2017-03-17 14:20
+										<ul class="d-inline float-right">
+											<li class="d-inline ml-2">
+												<span class="text-primary" blogId="-1" commentUserId="-1">赞(1)</span>
+											</li>
+											<li class="d-inline ml-2">|</li>
+											<li class="d-inline ml-2">
+												<span id="toreply" class="text-primary" blogId="-1" commentUserId="-1">回复(2)</span>
+											</li>
+										</ul>
+										<p>不错哦，顶起！</p>
+									</div> -->
+
+									<!--显示回复内容-->
+								<!-- 	<ul class="list-unstyled bg-gray font-size-12 text-muted">
+										<li class="pt-3 mb-3 border-bottom">
+											<div style="font-size: 12px;">
+												<a href="/u/waylau" class="card-link">waylau</a>
+												2019-04-15 15:32:18
+												<ul class="d-inline float-right">
+													<li class="d-inline ml-2">
+														<span class="text-primary" blogId="-1" commentUserId="-1">赞(1)</span>
+													</li>
+													<li class="d-inline ml-2">|</li>
+													<li class="d-inline ml-2">
+														<span id="toreply" class="text-primary" blogId="-1" commentUserId="-1">回复(2)</span>
+													</li>
+												</ul>
+
+												<p>不错哦，顶起！</p>
+											</div>
+											<hr />
+										</li>
+
+										<li class="pt-3 mb-3 border-bottom">
+											<div style="font-size: 12px;">
+												<a href="/u/waylau">Jack</a>
+												回复
+												<a href="/u/waylau" class="card-link">waylau</a>
+												<span>
+													2019-04-15 15:32:18
+												</span>
+												<ul class="d-inline float-right">
+													<li class="d-inline ml-2">
+														<a href="#" class="text-primary" blogId="-1" commentUserId="-1">赞(1)</a>
+													</li>
+													<li class="d-inline ml-2">|</li>
+													<li class="d-inline ml-2">
+														<span id="toreply" class="text-primary" blogId="-1" commentUserId="-1">回复(2)</span>
+													</li>
+												</ul>
+												<p>不错哦，顶起！</p>
+											</div>
+										</li>
+
+									</ul>
+
+								</div> -->
+							<!-- </div> -->
+						</div>
+						
+						<div class="card-block">
+							<div>
+								<nav>
+									<ul class="pagination justify-content-center mb-4 commentPage">
+										<!-- <li class="page-item"><a class="page-link">1</a></li>
+										<li class="page-item"><a class="page-link">2</a></li> -->
+									</ul>
+								</nav>
+							</div>
+						</div>
+						
+						<!--点击显示回复框-->
+						<div class="card-block" style="display: none;" id="replyDiv">
+							<a href="#" title="waylau" style="float: left!important;margin-top: 10px;margin-right: 12px;">
+								<img src="../images/avatar-defualt.jpg" class="blog-avatar-50 returnUserBox">
+							</a>
+							<div class="row">
+								<div style="width: 100%;">
+									<textarea class="blog-textarea" placeholder="回复留言~" id="replyCommentContent"></textarea>
+								</div>
+							</div>
+							<button class="btn btn-info float-right" id="submitComment">回复评论</button>
+						</div>
+						
+						
+					</div>
+
+				</div>
+
+
+
+
+				<!-- 右侧栏目 -->
+				<div class="col-md-4">
+					<div>
+						<!-- 文章目录 -->
+						<div class="card ">
+							<h5 class="card-header"><i class="fa fa-bars" aria-hidden="true"></i> 文章目录</h5>
+							<div class="card-block">
+								<div class="row">
+									<div id="catalog" class="col-lg-12"></div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 编辑博客 -->
+						<div class="card my-4 hidden">
+							<h5 class="card-header"><i class="fa fa-connectdevelop" aria-hidden="true"></i> 编辑博客</h5>
+							<div class="list-group">
+								<a href="#" class="btn btn-primary float-right">编辑</a>
+								<a href="javascript:void(0)" class="btn btn-primary float-right blog-delete-blog">删除</a>
+							</div>
+
+						</div>
+
+						<!-- 相关博客 -->
+						<div class="card my-4 hidden">
+							<h5 class="card-header"><i class="fa fa-connectdevelop" aria-hidden="true"></i> 相关博客</h5>
+							<div class="list-group">
+								<ul class="list-group">
+									<a href="#/blogs/1" class="list-group-item" title="waylau">
+										Spring Data + Thymeleaf 3 + Bootstrap 4 实现分页器
+									</a>
+									<a href="#/blogs/1" class="list-group-item" title="waylau">
+										用大白话聊聊分布式系统
+									</a>
+									<a href="#/blogs/1" class="list-group-item" title="waylau">
+										用大白话聊聊分布式系统>
+									</a>
+									<a href="#/blogs/1" class="list-group-item" title="waylau">
+										使用 Eclipse Checkstyle Plugin
+									</a>
+
+									<a href="#/blogs/1" class="list-group-item" title="waylau">
+										使用 Eclipse Checkstyle Plugin
+									</a>
+								</ul>
+							</div>
+
+						</div>
+
+
+
+					</div>
+				</div>
+
+			</div>
+			<!-- /.row -->
+
+		</div>
+		<!-- /.container -->
+
+
+		<footer class="blog-footer bg-inverse" data-th-fragment="footer">
+			<a id="goToTop" href="#">
+				<i class="fa fa-chevron-up fa-3x" aria-hidden="true"></i>
+			</a>
+			<div class="container">
+				<p class="m-0 text-center text-white">© 2017 <a href="https://waylau.com">waylau.com</a></p>
+			</div>
+
+			<!-- JavaScript -->
+			<script src="../js/jquery-3.1.1.min.js"></script>
+			<script src="../js/jquery-myblog-1.1.js"></script>
+			<script src="../js/allUse.js"></script>
+			<script src="../js/catalog-generator.js"></script>
+			<script src="../js/userspace/preBlog.js"></script>
+			<script src="../js/userspace/blog.js"></script>
+			<script src="../js/jquery.form.min.js"></script>
+			<script src="../js/tether.min.js"></script>
+			<script src="../js/bootstrap.min.js"></script>
+			<script src="../js/nprogress.js"></script>
+			<script src="../js/jquery.tag-editor.min.js"></script>
+			<script src="../js/chosen.jquery.js"></script>
+			<script src="../js/toastr.min.js"></script>
+			<script src="../js/cropbox.js"></script>
+			<script src="../js/thymeleaf-bootstrap-paginator.js"></script>
+			<script src="../js/thinker-md.vendor.min.js"></script>
+		</footer>
+		<script>
+			$(".login").click(function() {
+				window.location.href = "../login.html";
+			})
+			$(".register").click(function() {
+				window.location.href = "../register.html";
+			})
+		</script>
+	</body>
+</html>

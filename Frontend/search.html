@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Tether core CSS -->
+		<link href="css/tether.min.css" rel="stylesheet">
+
+		<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Font-Awesome CSS -->
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+
+		<!-- NProgress CSS -->
+		<link href="css/nprogress.css" rel="stylesheet">
+
+		<!-- thinker-md CSS -->
+		<link href="css/thinker-md.vendor.css" rel="stylesheet">
+
+		<!-- bootstrap tags CSS -->
+		<link href="css/component-tageditor.css" rel="stylesheet">
+
+		<!-- bootstrap chosen CSS -->
+		<link href="css/component-chosen.min.css" rel="stylesheet">
+
+		<!-- toastr CSS -->
+		<link href="css/toastr.min.css" rel="stylesheet">
+
+		<!-- jQuery image cropping plugin CSS -->
+		<link href="css/cropbox.css" rel="stylesheet">
+
+		<!-- Custom styles -->
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/thymeleaf-bootstrap-paginator.css" rel="stylesheet">
+		<link href="css/blog.css" rel="stylesheet">
+		<title>index</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md">
+			<div class="container">
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsContainer"
+				 aria-controls="navbarsExampleContainer" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">NewStarBlog</a>
+
+				<div class="collapse navbar-collapse" id="navbarsContainer">
+
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" style="color: #5bc0de" href="index.html?orderModel=0">最新 <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" style="color: red;" href="index.html?orderModel=1">最热</a>
+						</li>
+						<li>
+							<form class="form-inline mt-2 mt-md-0">
+								<input class="form-control mr-sm-2 inputKeyword" type="text" placeholder="搜索">
+								<button type="button" class="btn searchBtn"><i class="fa fa-search" aria-hidden="true"></i></button>
+							</form>
+						</li>
+
+					</ul>
+					<div class="loginArea row hidden">
+						<!-- <div class="btn"> -->
+
+						<div class="dropdown" style="margin: auto 10px;">
+
+							<a class="dropdown-toggle" id="message" href="#" data-toggle="dropdown">
+								<span class="userName">12312</span>
+
+							</a>
+							<div class="dropdown-menu LoginPersonBox">
+								<a class="dropdown-item" href="userspace/userProfile.html" >个人主页</a>
+								<a class="dropdown-item" href="userspace/settingUserInfo.html">个人设置</a>
+							</div>
+
+						</div>
+						<!-- </div> -->
+
+
+						<div>
+							<a href="userspace/blogedit.html" class="btn my-2 my-sm-0">写博客</a>
+						</div>
+
+						<div>
+							<input class="btn logout" type="submit" style="background: #f7f7f9;color: #5BC0DE;margin-left: 10px;" value="退出">
+						</div>
+					</div>
+
+
+
+					<div>
+						<button class="btn my-2 my-sm-0 login" style="background: #f7f7f9;color: #5BC0DE;margin-left: 10px;" >登录</button>
+						<button class="btn my-2 my-sm-0 register" style="background: #f7f7f9;color: #5BC0DE;margin-left: 10px;">注册</button>
+					</div>
+
+				</div>
+
+			</div>
+		</nav>
+		<!-- Page Content -->
+		<div class="container blog-content-container">
+			<div>
+				<h5 >搜索结果: <span class="searchCount" style="color: #FF9800;"></span> 条</h5>
+			
+			</div>
+			<hr />
+			<div class="row">
+				<!-- Blog Entries Column -->
+				<div class="col-md-12 searchBlog">
+					
+				</div>
+			</div>
+			<!-- /.row -->
+			<div class="row">
+				<div class="col-md-12">
+					<nav>
+						<ul class="pagination justify-content-center mb-4">
+							
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<!-- /.container -->
+
+
+		<footer class="blog-footer bg-inverse" data-th-fragment="footer">
+			<a id="goToTop" href="#">
+				<i class="fa fa-chevron-up fa-3x" aria-hidden="true"></i>
+			</a>
+			<div class="container">
+				<p class="m-0 text-center text-white">© 2017 <a href="https://waylau.com">waylau.com</a></p>
+			</div>
+
+			<!-- JavaScript -->
+
+			<script src="js/jquery-3.1.1.min.js"></script>
+			<script src="js/jquery-myblog-1.1.js"></script>
+			<script src="js/allUse.js"></script>
+			<script src="js/jquery.form.min.js"></script>
+			<script src="js/tether.min.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+			<script src="js/nprogress.js"></script>
+			<script src="js/thinker-md.vendor.min.js"></script>
+			<script src="js/jquery.tag-editor.min.js"></script>
+			<script src="js/chosen.jquery.js"></script>
+			<script src="js/toastr.min.js"></script>
+			<script src="js/cropbox.js"></script>
+			<script src="js/thymeleaf-bootstrap-paginator.js"></script>
+			<script src="js/catalog-generator.js"></script>
+			<script src="js/search.js"></script>
+		</footer>
+	</body>
+</html>

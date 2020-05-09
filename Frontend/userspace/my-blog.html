@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Tether core CSS -->
+		<link href="../css/tether.min.css" rel="stylesheet">
+		<!-- Bootstrap CSS -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<!-- Font-Awesome CSS -->
+		<link href="../css/font-awesome.min.css" rel="stylesheet">
+		<!-- NProgress CSS -->
+		<link href="../css/nprogress.css" rel="stylesheet">
+		<!-- thinker-md CSS -->
+		<link href="../css/thinker-md.vendor.css" rel="stylesheet">
+		<!-- bootstrap tags CSS -->
+		<link href="../css/component-tageditor.css" rel="stylesheet">
+		<!-- bootstrap chosen CSS -->
+		<link href="../css/component-chosen.min.css" rel="stylesheet">
+		<!-- toastr CSS -->
+		<link href="../css/toastr.min.css" rel="stylesheet">
+		<!-- jQuery image cropping plugin CSS -->
+		<link href="../css/cropbox.css" rel="stylesheet">
+		<!-- Custom styles -->
+		<link href="../css/style.css" rel="stylesheet">
+		<link href="../css/thymeleaf-bootstrap-paginator.css" rel="stylesheet">
+		<link href="../css/blog.css" rel="stylesheet">
+		<title>Blog</title>
+
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md">
+			<div class="container">
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsContainer"
+				 aria-controls="navbarsExampleContainer" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<a class="navbar-brand" href="../index.html">NewStarBlog</a>
+
+				<div class="collapse navbar-collapse" id="navbarsContainer">
+
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" style="color: #5bc0de" href="../index.html?orderModel=0">最新 <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" style="color: red;" href="../index.html?orderModel=1">最热</a>
+						</li>
+						<form class="form-inline mt-2 mt-md-0">
+							<input class="form-control mr-sm-2 inputKeyword" type="text" placeholder="搜索">
+							<button type="button" class="btn btn-outline-secondary my-2 my-sm-0 searchBtn"><i class="fa fa-search" aria-hidden="true"></i></button>
+						</form>
+
+					</ul>
+					<div class="loginArea row hidden">
+
+						<!-- <div class="btn"> -->
+
+						<div class="dropdown" style="margin: auto 10px;">
+
+							<a class="dropdown-toggle" id="message" href="#" data-toggle="dropdown">
+								<span class="userName">12312</span>
+
+							</a>
+							<div class="dropdown-menu LoginPersonBox">
+								<a class="dropdown-item myUserProfile" href="#" >个人主页</a>
+								<a class="dropdown-item" href="settingUserInfo.html">个人设置</a>
+							</div>
+
+						</div>
+						<!-- </div> -->
+
+
+						<div>
+							<a href="blogedit.html" class="btn my-2 my-sm-0 editBlog">写博客</a>
+						</div>
+
+						<div>
+							<input class="btn logout" type="submit" style="background: #f7f7f9;color: #5BC0DE;margin-left: 10px;" value="退出">
+						</div>
+					</div>
+
+
+
+					<div>
+						<button class="btn my-2 my-sm-0 login" style="background: #f7f7f9;color: #5BC0DE;margin-left: 10px;" type="submit">登录</button>
+						<button class="btn my-2 my-sm-0 register" style="background: #f7f7f9;color: #5BC0DE;margin-left: 10px;" type="submit">注册</button>
+					</div>
+
+				</div>
+
+			</div>
+		</nav>
+		<!-- Page Content -->
+		<div class="container blog-content-container">
+			<div class="p-2">
+				<!-- 选项 -->
+				<div class="position-relative">
+					<ul class="nav nav-tabs">
+						<li class="nav-item">
+							<a class="nav-link" href="userProfile.html">个人信息</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="my-blog.html">我的博客</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="my-reply.html">我的回复</a>
+						</li>
+					</ul>
+				</div>
+				<!-- 我的博客 -->
+				<div class="mt-4">
+					<h6><li class="fa fa-list" style="color: coral;"></li>  发布的博客(93)</h6>
+					<hr>
+					<ul class="list-unstyled mt-4 pl-3 pr-3">
+						<li class="border-bottom pb-3 mt-4">
+							<div class="font-size-16 text-info">
+								<a href="#" class="text-info">备战春招，面试刷题跟他复习，一个月全搞定！</a>
+							</div>
+							<div class="mt-1 font-size-14">
+								金三银四的金三已经到了，你还沉浸在过年的喜悦中吗？
+								如果是，那我要让你清醒一下了：目前大部分公司已经开启了内推，正式网申也将在3月份陆续开始，金三银四，春招的求职黄金时期已经来啦！！！
+								再不准备，作为19应届生的你可能就找不到工作了。。。作为20届实习生的你可能就找不到实习了。。。
+								现阶段时间紧，任务重，能做到短时间内快速提升的也就只有算法了，
+								那么算法要怎么复习？重点在哪里？常见笔试面试算法题型和解题思路以及最优代码是怎样的？
+								跟左程云老师学算法，不仅能解决以上所有问题，还能在短时间内得到最大程度的提升！！！
+							</div>
+							<div class="text-right font-size-12 text-muted mt-3">
+								<i class="fa fa-thumbs-o-up mr-2" style="color: #5bc0de;">  11</i> 发布于  <b>2019-04-15 10:10:10</b>
+							</div>
+						</li>
+						<hr/>
+						<li class="border-bottom pb-3 mt-4">
+							<div class="font-size-16 text-info">
+								<a href="#" class="text-info">备战春招，面试刷题跟他复习，一个月全搞定！</a>
+							</div>
+							<div class="mt-1 font-size-14">
+								金三银四的金三已经到了，你还沉浸在过年的喜悦中吗？
+								如果是，那我要让你清醒一下了：目前大部分公司已经开启了内推，正式网申也将在3月份陆续开始，金三银四，春招的求职黄金时期已经来啦！！！
+								再不准备，作为19应届生的你可能就找不到工作了。。。作为20届实习生的你可能就找不到实习了。。。
+								现阶段时间紧，任务重，能做到短时间内快速提升的也就只有算法了，
+								那么算法要怎么复习？重点在哪里？常见笔试面试算法题型和解题思路以及最优代码是怎样的？
+								跟左程云老师学算法，不仅能解决以上所有问题，还能在短时间内得到最大程度的提升！！！
+							</div>
+							<div class="text-right font-size-12 text-muted mt-3">
+								<i class="fa fa-thumbs-o-up mr-2" style="color: #5bc0de;">  11</i> 发布于  <b>2019-04-15 10:10:10</b>
+							</div>
+						</li>
+						<hr/>
+						<li class="border-bottom pb-3 mt-4">
+							<div class="font-size-16 text-info">
+								<a href="#" class="text-info">备战春招，面试刷题跟他复习，一个月全搞定！</a>
+							</div>
+							<div class="mt-1 font-size-14">
+								金三银四的金三已经到了，你还沉浸在过年的喜悦中吗？
+								如果是，那我要让你清醒一下了：目前大部分公司已经开启了内推，正式网申也将在3月份陆续开始，金三银四，春招的求职黄金时期已经来啦！！！
+								再不准备，作为19应届生的你可能就找不到工作了。。。作为20届实习生的你可能就找不到实习了。。。
+								现阶段时间紧，任务重，能做到短时间内快速提升的也就只有算法了，
+								那么算法要怎么复习？重点在哪里？常见笔试面试算法题型和解题思路以及最优代码是怎样的？
+								跟左程云老师学算法，不仅能解决以上所有问题，还能在短时间内得到最大程度的提升！！！
+							</div>
+							<div class="text-right font-size-12 text-muted mt-3">
+								<i class="fa fa-thumbs-o-up mr-2" style="color: #5bc0de;">  11</i> 发布于  <b>2019-04-15 10:10:10</b>
+							</div>
+						</li>
+						<hr/>
+						<li class="border-bottom pb-3 mt-4">
+							<div class="font-size-16 text-info">
+								<a href="#" class="text-info">备战春招，面试刷题跟他复习，一个月全搞定！</a>
+							</div>
+							<div class="mt-1 font-size-14">
+								金三银四的金三已经到了，你还沉浸在过年的喜悦中吗？
+								如果是，那我要让你清醒一下了：目前大部分公司已经开启了内推，正式网申也将在3月份陆续开始，金三银四，春招的求职黄金时期已经来啦！！！
+								再不准备，作为19应届生的你可能就找不到工作了。。。作为20届实习生的你可能就找不到实习了。。。
+								现阶段时间紧，任务重，能做到短时间内快速提升的也就只有算法了，
+								那么算法要怎么复习？重点在哪里？常见笔试面试算法题型和解题思路以及最优代码是怎样的？
+								跟左程云老师学算法，不仅能解决以上所有问题，还能在短时间内得到最大程度的提升！！！
+							</div>
+							<div class="text-right font-size-12 text-muted mt-3">
+								<i class="fa fa-thumbs-o-up mr-2" style="color: #5bc0de;">  11</i> 发布于  <b>2019-04-15 10:10:10</b>
+							</div>
+						</li>
+						<hr/>
+						<li class="border-bottom pb-3 mt-4">
+							<div class="font-size-16 text-info">
+								<a href="#" class="text-info">备战春招，面试刷题跟他复习，一个月全搞定！</a>
+							</div>
+							<div class="mt-1 font-size-14">
+								金三银四的金三已经到了，你还沉浸在过年的喜悦中吗？
+								如果是，那我要让你清醒一下了：目前大部分公司已经开启了内推，正式网申也将在3月份陆续开始，金三银四，春招的求职黄金时期已经来啦！！！
+								再不准备，作为19应届生的你可能就找不到工作了。。。作为20届实习生的你可能就找不到实习了。。。
+								现阶段时间紧，任务重，能做到短时间内快速提升的也就只有算法了，
+								那么算法要怎么复习？重点在哪里？常见笔试面试算法题型和解题思路以及最优代码是怎样的？
+								跟左程云老师学算法，不仅能解决以上所有问题，还能在短时间内得到最大程度的提升！！！
+							</div>
+							<div class="text-right font-size-12 text-muted mt-3">
+								<i class="fa fa-thumbs-o-up mr-2" style="color: #5bc0de;">  11</i> 发布于  <b>2019-04-15 10:10:10</b>
+							</div>
+						</li>
+						<hr/>
+					</ul>
+					<!-- 分页 -->
+					<nav class="mt-5">
+						<ul class="pagination justify-content-center">
+							<li class="page-item"><a class="page-link" href="#">首页</a></li>
+							<li class="page-item disabled"><a class="page-link" href="#">上一页</a></li>
+							<li class="page-item active"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item"><a class="page-link" href="#">4</a></li>
+							<li class="page-item"><a class="page-link" href="#">5</a></li>
+							<li class="page-item"><a class="page-link" href="#">下一页</a></li>
+							<li class="page-item"><a class="page-link" href="#">末页</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+
+
+		<footer class="blog-footer bg-inverse" data-th-fragment="footer">
+			<a id="goToTop" href="#">
+				<i class="fa fa-chevron-up fa-3x" aria-hidden="true"></i>
+			</a>
+			<div class="container">
+				<p class="m-0 text-center text-white">© 2017 <a href="https://waylau.com">waylau.com</a></p>
+			</div>
+
+			<!-- JavaScript -->
+			<script src="../js/jquery-3.1.1.min.js"></script>
+			<script src="../js/jquery-myblog-1.1.js"></script>
+			<script src="../js/allUse.js"></script>
+			<script src="../js/jquery.form.min.js"></script>
+			<script src="../js/tether.min.js"></script>
+			<script src="../js/bootstrap.min.js"></script>
+			<script src="../js/nprogress.js"></script>
+			<script src="../js/jquery.tag-editor.min.js"></script>
+			<script src="../js/chosen.jquery.js"></script>
+			<script src="../js/toastr.min.js"></script>
+			<script src="../js/cropbox.js"></script>
+			<script src="../js/thymeleaf-bootstrap-paginator.js"></script>
+			<script src="../js/catalog-generator.js"></script>
+			<script src="../js/thinker-md.vendor.min.js"></script>
+		</footer>
+		<script>
+			$(".login").click(function() {
+				window.location.href = "../login.html";
+			})
+			$(".register").click(function() {
+				window.location.href = "../register.html";
+			})
+		</script>
+		<script src="../js/userspace/u.js"></script>
+	</body>
+</html>

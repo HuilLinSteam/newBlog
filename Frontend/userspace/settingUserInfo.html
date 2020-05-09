@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Tether core CSS -->
+		<link href="../css/tether.min.css" rel="stylesheet">
+		<!-- Bootstrap CSS -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<!-- Font-Awesome CSS -->
+		<link href="../css/font-awesome.min.css" rel="stylesheet">
+		<!-- NProgress CSS -->
+		<link href="../css/nprogress.css" rel="stylesheet">
+		<!-- thinker-md CSS -->
+		<link href="../css/thinker-md.vendor.css" rel="stylesheet">
+		<!-- bootstrap tags CSS -->
+		<link href="../css/component-tageditor.css" rel="stylesheet">
+		<!-- bootstrap chosen CSS -->
+		<link href="../css/component-chosen.min.css" rel="stylesheet">
+		<!-- toastr CSS -->
+		<link href="../css/toastr.min.css" rel="stylesheet">
+		<!-- jQuery image cropping plugin CSS -->
+		<link href="../css/cropbox.css" rel="stylesheet">
+		<!-- Custom styles -->
+		<link href="../css/style.css" rel="stylesheet">
+		<link href="../css/thymeleaf-bootstrap-paginator.css" rel="stylesheet">
+		<link href="../css/blog.css" rel="stylesheet">
+		<title>修改用户信息</title>
+
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md">
+			<div class="container">
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsContainer"
+				 aria-controls="navbarsExampleContainer" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<a class="navbar-brand" href="../index.html">NewStarBlog</a>
+
+				<div class="collapse navbar-collapse" id="navbarsContainer">
+
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" style="color: #5bc0de" href="../index.html?orderModel=0">最新 <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" style="color: red;" href="../index.html?orderModel=1">最热</a>
+						</li>
+						<form class="form-inline mt-2 mt-md-0">
+							<input class="form-control mr-sm-2 inputKeyword" type="text" placeholder="搜索">
+							<button type="button" class="btn btn-outline-secondary my-2 my-sm-0 searchBtn"><i class="fa fa-search" aria-hidden="true"></i></button>
+						</form>
+
+					</ul>
+					<div class="loginArea row hidden">
+						<!-- <div class="btn"> -->
+
+						<div class="dropdown" style="margin: auto 10px;">
+
+							<a class="dropdown-toggle" id="message" href="#" data-toggle="dropdown">
+								<span class="userName">12312</span>
+
+							</a>
+							<div class="dropdown-menu LoginPersonBox">
+								<a class="dropdown-item myUserProfile" href="#" >个人主页</a>
+								<a class="dropdown-item" href="settingUserInfo.html">个人设置</a>
+							</div>
+
+						</div>
+						<!-- </div> -->
+
+
+						<div>
+							<a href="blogedit.html" class="btn my-2 my-sm-0 editBlog">写博客</a>
+						</div>
+
+						<div>
+							<input class="btn logout" type="submit" style="background: #f7f7f9;color: #5BC0DE;margin-left: 10px;" value="退出">
+						</div>
+					</div>
+
+
+
+					<div>
+						<button class="btn my-2 my-sm-0 login" style="background: #f7f7f9;color: #5BC0DE;margin-left: 10px;" type="submit">登录</button>
+						<button class="btn my-2 my-sm-0 register" style="background: #f7f7f9;color: #5BC0DE;margin-left: 10px;" type="submit">注册</button>
+					</div>
+
+				</div>
+
+			</div>
+		</nav>
+		<!-- Page Content -->
+		<div class="container blog-content-container">
+
+			<div class="row">
+
+				<!-- 左侧栏目 -->
+				<div class="col-md-4 col-xl-3">
+
+					<div class="row">
+						<div class="col-md-12">
+							<span>
+								<a class="blog-edit-avatar" data-toggle="modal" data-target="#flipFlop" role="button">
+									<img src="../images/avatar-defualt.jpg" class="blog-avatar blog-avatar-230 loginUserHeaderUrl">
+								</a>
+								</a>
+							</span>
+
+						</div>
+
+					</div>
+
+				</div>
+
+
+
+				<!-- 右侧栏目 -->
+
+
+				<div class="col-md-8 col-xl-9">
+
+
+					<!-- 个人设置 -->
+					<div class="card ">
+						<h5 class="card-header"><i class="fa fa-cog" aria-hidden="true"></i> 个人设置</h5>
+						<div class="card-block">
+							<form  id="userForm">
+								<input type="hidden" name="id" id="userId" th:value="*{id}">
+
+								<div class="form-group ">
+									<label for="username" class="col-form-label">账号</label>
+									<input type="text" class="form-control" id="username" name="username" readonly="readonly">
+
+								</div>
+								<div class="form-group">
+									<label for="email" class="col-form-label">邮箱</label>
+									<input type="email" class="form-control" id="email" name="email" maxlength="50"
+									 placeholder="请输入邮箱">
+								</div>
+								<div class="form-group">
+									<label for="name" class="col-form-label">姓名</label>
+									<input type="text" class="form-control" id="name" name="name" maxlength="20" placeholder="请输入姓名，至少2个字符，至多20个">
+								</div>
+								<div class="form-group">
+									<label for="password" class="col-form-label">密码</label>
+									<input type="password" class="form-control" id="password" name="password" maxlength="30"
+									 placeholder="请输入密码，至少3个字符，至多30个">
+								</div>
+								<div class="form-group">
+									<button type="button" class="btn btn-primary updateUserBtn">保存</button>
+								</div>
+							</form>
+
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+			<!-- /.row -->
+
+		</div>
+		<!-- /.container -->
+
+		<!-- The modal -->
+		<div class="modal fade" id="flipFlop" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="modalLabel">编辑头像</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+
+					</div>
+					<div class="modal-body" id="avatarFormContainer"></div>
+					<div class="modal-footer">
+						<button class="btn btn-primary" data-dismiss="modal" id="submitEditAvatar">提交</button>
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="blog-footer bg-inverse" data-th-fragment="footer">
+			<a id="goToTop" href="#">
+				<i class="fa fa-chevron-up fa-3x" aria-hidden="true"></i>
+			</a>
+			<div class="container">
+				<p class="m-0 text-center text-white">© 2017 <a href="https://waylau.com">waylau.com</a></p>
+			</div>
+		
+			<!-- JavaScript -->
+			<script src="../js/jquery-3.1.1.min.js"></script>
+			<script src="../js/jquery-myblog-1.1.js"></script>
+			<script src="../js/allUse.js"></script>
+			<script src="../js/userspace/settingUserInfo.js"></script>
+			<script src="../js/jquery.form.min.js"></script>
+			<script src="../js/tether.min.js"></script>
+			<script src="../js/bootstrap.min.js"></script>
+			<script src="../js/nprogress.js"></script>
+			<script src="../js/jquery.tag-editor.min.js"></script>
+			<script src="../js/chosen.jquery.js"></script>
+			<script src="../js/toastr.min.js"></script>
+			<script src="../js/cropbox.js"></script>
+			<script src="../js/thymeleaf-bootstrap-paginator.js"></script>
+			<script src="../js/catalog-generator.js"></script>
+			<script src="../js/thinker-md.vendor.min.js"></script>
+		</footer>
+		<script>
+			$(".login").click(function() {
+				window.location.href = "../login.html";
+			})
+			$(".register").click(function() {
+				window.location.href = "../register.html";
+			})
+		</script>
+
+	</body>
+</html>

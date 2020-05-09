@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Tether core CSS -->
+		<link href="../css/tether.min.css" rel="stylesheet">
+		<!-- Bootstrap CSS -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<!-- Font-Awesome CSS -->
+		<link href="../css/font-awesome.min.css" rel="stylesheet">
+		<!-- NProgress CSS -->
+		<link href="../css/nprogress.css" rel="stylesheet">
+		<!-- thinker-md CSS -->
+		<link href="../css/thinker-md.vendor.css" rel="stylesheet">
+		<!-- bootstrap tags CSS -->
+		<link href="../css/component-tageditor.css" rel="stylesheet">
+		<!-- bootstrap chosen CSS -->
+		<link href="../css/component-chosen.min.css" rel="stylesheet">
+		<!-- toastr CSS -->
+		<link href="../css/toastr.min.css" rel="stylesheet">
+		<!-- jQuery image cropping plugin CSS -->
+		<link href="../css/cropbox.css" rel="stylesheet">
+		<!-- Custom styles -->
+		<link href="../css/style.css" rel="stylesheet">
+		<link href="../css/thymeleaf-bootstrap-paginator.css" rel="stylesheet">
+		<link href="../css/blog.css" rel="stylesheet">
+		<title>私信详情</title>
+
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md">
+			<div class="container">
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsContainer"
+				 aria-controls="navbarsExampleContainer" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<a class="navbar-brand" href="../index.html">NewStarBlog</a>
+
+				<div class="collapse navbar-collapse" id="navbarsContainer">
+
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" style="color: #5bc0de" href="../index.html?orderModel=0">最新 <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" style="color: red;" href="../index.html?orderModel=1">最热</a>
+						</li>
+						<form class="form-inline mt-2 mt-md-0">
+							<input class="form-control mr-sm-2 inputKeyword" type="text" placeholder="搜索">
+							<button type="button" class="btn btn-outline-secondary my-2 my-sm-0 searchBtn"><i class="fa fa-search"
+								 aria-hidden="true"></i></button>
+						</form>
+
+					</ul>
+					<div class="loginArea row hidden">
+
+						<!-- <div class="btn"> -->
+
+						<div class="dropdown" style="margin: auto 10px;">
+
+							<a class="dropdown-toggle" id="message" href="#" data-toggle="dropdown">
+								<span class="userName">12312</span>
+
+							</a>
+							<div class="dropdown-menu LoginPersonBox">
+								<a class="dropdown-item myUserProfile" href="#">个人主页</a>
+								<a class="dropdown-item" href="settingUserInfo.html">个人设置</a>
+							</div>
+
+						</div>
+						<!-- </div> -->
+
+
+						<div>
+							<a href="blogedit.html" class="btn my-2 my-sm-0 editBlog">写博客</a>
+						</div>
+
+						<div>
+							<input class="btn logout" type="submit" style="background: #f7f7f9;color: #5BC0DE;margin-left: 10px;" value="退出">
+						</div>
+					</div>
+
+
+
+					<div>
+						<button class="btn my-2 my-sm-0 login" style="background: #f7f7f9;color: #5BC0DE;margin-left: 10px;" type="submit">登录</button>
+						<button class="btn my-2 my-sm-0 register" style="background: #f7f7f9;color: #5BC0DE;margin-left: 10px;" type="submit">注册</button>
+					</div>
+
+				</div>
+
+			</div>
+		</nav>
+		<!-- Page Content -->
+		<div class="container blog-content-container">
+			<div class="p-2">
+				<div class="row">
+					<div class="col-8">
+						<h6 class="mt-2"><b class="square"></b> 来自 <i class="fa fa-user-circle fromUserLetter" style="color: darkcyan;">落基山脉下的闲人</i> 的私信</h6>
+					</div>
+					<div class="col-4 text-right">
+						<button type="button" class="btn btn-secondary btn-sm returnLetterPage" style="font-size: 12px;">返回</button>
+						<button type="button" class="btn btn-primary btn-sm"  style="font-size: 12px;" data-toggle="modal" data-target="#sendModal">给TA私信</button>
+					</div>
+				</div>
+				<hr/>
+				<!-- 弹出框 -->
+				<div class="modal fade" id="sendModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">发私信</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="form-group">
+										<label for="recipient-name" class="col-form-label">发给：</label>
+										<input type="text" class="form-control" id="recipient-name" value="落基山脉下的闲人">
+									</div>
+									<div class="form-group">
+										<label for="message-text" class="col-form-label">内容：</label>
+										<textarea class="form-control" id="message-text" rows="10"></textarea>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+								<button type="button" class="btn btn-primary" id="sendBtn">发送</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 提示框 -->
+				<div class="modal fade" id="hintModal" tabindex="-1" role="dialog" aria-labelledby="hintModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="hintModalLabel">提示</h5>
+							</div>
+							<div class="modal-body" id="hintBody">
+								发送完毕!
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 私信列表 -->
+				<ul class="list-unstyled mt-4 userLetterDetailBox">
+					<li class="media pb-3 pt-3 mb-2">
+						<a href="profile.html">
+							<img src="http://images.nowcoder.com/head/8t.png" class="mr-4 rounded-circle user-header" style="width: 50px;height: 50px;" alt="用户头像">
+						</a>
+						<div class="card media-body p-3" role="alert" aria-live="assertive" aria-atomic="true">
+							<div class="toast-header">
+								<strong class="mr-auto">落基山脉下的闲人</strong>
+								<small>2019-04-25 15:49:32</small>
+							</div>
+							<div class="toast-body">
+								君不见, 黄河之水天上来, 奔流到海不复回!
+							</div>
+						</div>
+					</li>
+					<hr/>
+					
+					<li class="media pb-3 pt-3 mb-2">
+						<a href="profile.html" class="float-right">
+							<img src="http://images.nowcoder.com/head/8t.png" class="mr-4 rounded-circle user-header" style="width: 50px;height: 50px;" alt="用户头像">
+						</a>
+						<div class="card media-body p-3" role="alert" aria-live="assertive" aria-atomic="true">
+							<div class="toast-header">
+								<strong class="mr-auto">落基山脉下的闲人</strong>
+								<small>2019-04-25 15:49:32</small>
+							</div>
+							<div class="toast-body">
+								岑夫子, 丹丘生, 将进酒, 杯莫停. 钟鼓馔玉不足贵, 但愿长醉不复醒!
+							</div>
+						</div>
+					</li>
+					<hr/>
+				</ul>
+
+				<!-- 分页 -->
+				<nav class="mt-5">
+					<ul class="pagination justify-content-center userLetterPage userLetterDetailPageNumber">
+						<!-- <li class="page-item"><a class="page-link" href="#">首页</a></li>
+						<li class="page-item disabled"><a class="page-link" href="#">上一页</a></li>
+						<li class="page-item active"><a class="page-link" href="#">1</a></li>
+						<li class="page-item"><a class="page-link" href="#">2</a></li>
+						<li class="page-item"><a class="page-link" href="#">3</a></li>
+						<li class="page-item"><a class="page-link" href="#">4</a></li>
+						<li class="page-item"><a class="page-link" href="#">5</a></li>
+						<li class="page-item"><a class="page-link" href="#">下一页</a></li>
+						<li class="page-item"><a class="page-link" href="#">末页</a></li> -->
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<footer class="blog-footer bg-inverse" data-th-fragment="footer">
+			<a id="goToTop" href="#">
+				<i class="fa fa-chevron-up fa-3x" aria-hidden="true"></i>
+			</a>
+			<div class="container">
+				<p class="m-0 text-center text-white">© 2017 <a href="https://waylau.com">waylau.com</a></p>
+			</div>
+
+			<!-- JavaScript -->
+			<script src="../js/jquery-3.1.1.min.js"></script>
+			<script src="../js/jquery-myblog-1.1.js"></script>
+			<script src="../js/allUse.js"></script>
+			<script src="../js/jquery.form.min.js"></script>
+			<script src="../js/tether.min.js"></script>
+			<script src="../js/bootstrap.min.js"></script>
+			<script src="../js/nprogress.js"></script>
+			<script src="../js/jquery.tag-editor.min.js"></script>
+			<script src="../js/chosen.jquery.js"></script>
+			<script src="../js/toastr.min.js"></script>
+			<script src="../js/cropbox.js"></script>
+			<script src="../js/thymeleaf-bootstrap-paginator.js"></script>
+			<script src="../js/catalog-generator.js"></script>
+			<script src="../js/thinker-md.vendor.min.js"></script>
+			<script src="../js/userspace/preLetterDetail.js"></script>
+		</footer>
+		<script>
+			$(".login").click(function() {
+				window.location.href = "../login.html";
+			})
+			$(".register").click(function() {
+				window.location.href = "../register.html";
+			})
+		</script>
+
+	</body>
+</html>
